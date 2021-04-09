@@ -22,6 +22,8 @@
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  * Copyright (c) 2014, 2016 by Delphix. All rights reserved.
  * Copyright Saso Kiselkov 2013, All rights reserved.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _SYS_ZIO_CHECKSUM_H
@@ -109,6 +111,10 @@ extern zio_checksum_info_t zio_checksum_table[ZIO_CHECKSUM_FUNCTIONS];
 extern zio_checksum_t abd_checksum_SHA256;
 extern zio_checksum_t abd_checksum_SHA512_native;
 extern zio_checksum_t abd_checksum_SHA512_byteswap;
+
+/* sm3 */
+extern zio_checksum_t abd_checksum_sm3_native;
+extern zio_checksum_t abd_checksum_sm3_byteswap;
 
 /* Skein */
 extern zio_checksum_t abd_checksum_skein_native;

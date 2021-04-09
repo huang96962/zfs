@@ -57,6 +57,7 @@ $(MODULE)-objs += io/edonr_mod.o
 $(MODULE)-objs += io/sha1_mod.o
 $(MODULE)-objs += io/sha2_mod.o
 $(MODULE)-objs += io/skein_mod.o
+$(MODULE)-objs += io/sm3_mod.o
 $(MODULE)-objs += os/modhash.o
 $(MODULE)-objs += os/modconf.o
 $(MODULE)-objs += algs/modes/cbc.o
@@ -76,6 +77,7 @@ $(MODULE)-objs += algs/sha1/sha1.o
 $(MODULE)-objs += algs/skein/skein.o
 $(MODULE)-objs += algs/skein/skein_block.o
 $(MODULE)-objs += algs/skein/skein_iv.o
+$(MODULE)-objs += algs/sm3/sm3.o
 $(MODULE)-objs += $(ASM_SOURCES)
 
 $(MODULE)-$(CONFIG_X86) += algs/modes/gcm_pclmulqdq.o
@@ -102,6 +104,7 @@ ICP_DIRS = \
 	algs/sha1 \
 	algs/sha2 \
 	algs/skein \
+	algs/sm3 \
 	asm-x86_64 \
 	asm-x86_64/aes \
 	asm-x86_64/modes \

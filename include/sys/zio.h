@@ -26,6 +26,8 @@
  * Copyright (c) 2013 by Saso Kiselkov. All rights reserved.
  * Copyright (c) 2013, Joyent, Inc. All rights reserved.
  * Copyright 2016 Toomas Soome <tsoome@me.com>
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _ZIO_H
@@ -86,6 +88,7 @@ enum zio_checksum {
 	ZIO_CHECKSUM_SHA512,
 	ZIO_CHECKSUM_SKEIN,
 	ZIO_CHECKSUM_EDONR,
+	ZIO_CHECKSUM_SM3,
 	ZIO_CHECKSUM_FUNCTIONS
 };
 

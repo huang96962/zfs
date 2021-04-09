@@ -21,6 +21,8 @@
  */
 /*
  * Copyright (c) 2017, Datto, Inc. All rights reserved.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifdef _KERNEL
@@ -109,6 +111,7 @@
 void __exit
 icp_fini(void)
 {
+	sm3_mod_fini();
 	skein_mod_fini();
 	sha2_mod_fini();
 	sha1_mod_fini();
@@ -145,6 +148,7 @@ icp_init(void)
 	sha1_mod_init();
 	sha2_mod_init();
 	skein_mod_init();
+	sm3_mod_init();
 
 	return (0);
 }

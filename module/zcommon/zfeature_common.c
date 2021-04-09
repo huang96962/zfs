@@ -25,6 +25,8 @@
  * Copyright (c) 2013, Joyent, Inc. All rights reserved.
  * Copyright (c) 2014, Nexenta Systems, Inc. All rights reserved.
  * Copyright (c) 2017, Intel Corporation.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _KERNEL
@@ -406,6 +408,18 @@ zpool_feature_init(void)
 	    "Edon-R hash algorithm.",
 	    ZFEATURE_FLAG_PER_DATASET, ZFEATURE_TYPE_BOOLEAN,
 	    edonr_deps);
+	}
+
+	{
+	static const spa_feature_t sm3_deps[] = {
+		SPA_FEATURE_EXTENSIBLE_DATASET,
+		SPA_FEATURE_NONE
+	};
+	zfeature_register(SPA_FEATURE_SM3,
+	    "org.illumos:sm3", "sm3",
+	    "SM3 hash algorithm.",
+	    ZFEATURE_FLAG_PER_DATASET, ZFEATURE_TYPE_BOOLEAN,
+	    sm3_deps);
 	}
 
 	zfeature_register(SPA_FEATURE_DEVICE_REMOVAL,

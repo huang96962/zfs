@@ -24,6 +24,8 @@
  * Copyright (c) 2013 by Saso Kiselkov. All rights reserved.
  * Copyright (c) 2013, Joyent, Inc. All rights reserved.
  * Copyright (c) 2017, Intel Corporation.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _ZFEATURE_COMMON_H
@@ -57,6 +59,7 @@ typedef enum spa_feature {
 	SPA_FEATURE_SHA512,
 	SPA_FEATURE_SKEIN,
 	SPA_FEATURE_EDONR,
+	SPA_FEATURE_SM3,
 	SPA_FEATURE_USEROBJ_ACCOUNTING,
 	SPA_FEATURE_ENCRYPTION,
 	SPA_FEATURE_PROJECT_QUOTA,
