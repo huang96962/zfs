@@ -51,12 +51,14 @@ KERNEL_C = \
 	algs/skein/skein.c \
 	algs/skein/skein_block.c \
 	algs/skein/skein_iv.c \
+	algs/sm3/sm3.c \
 	illumos-crypto.c \
 	io/aes.c \
 	io/edonr_mod.c \
 	io/sha1_mod.c \
 	io/sha2_mod.c \
 	io/skein_mod.c \
+	io/sm3_mod.c \
 	os/modhash.c \
 	os/modconf.c \
 	core/kcf_sched.c \

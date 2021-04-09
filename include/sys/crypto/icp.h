@@ -21,6 +21,8 @@
  */
 /*
  * Copyright (c) 2016, Datto, Inc. All rights reserved.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef	_SYS_CRYPTO_ALGS_H
@@ -40,6 +42,9 @@ int sha2_mod_fini(void);
 
 int skein_mod_init(void);
 int skein_mod_fini(void);
+
+int sm3_mod_init(void);
+int sm3_mod_fini(void);
 
 int icp_init(void);
 void icp_fini(void);

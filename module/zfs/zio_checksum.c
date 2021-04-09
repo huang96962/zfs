@@ -22,6 +22,8 @@
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  * Copyright (c) 2013, 2016 by Delphix. All rights reserved.
  * Copyright 2013 Saso Kiselkov. All rights reserved.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #include <sys/zfs_context.h>
@@ -197,6 +199,9 @@ zio_checksum_info_t zio_checksum_table[ZIO_CHECKSUM_FUNCTIONS] = {
 	    ZCHECKSUM_FLAG_METADATA | ZCHECKSUM_FLAG_SALTED |
 	    ZCHECKSUM_FLAG_NOPWRITE, "edonr"},
 #endif
+	{{abd_checksum_sm3_native,	abd_checksum_sm3_byteswap},
+	    NULL, NULL, ZCHECKSUM_FLAG_METADATA | ZCHECKSUM_FLAG_DEDUP |
+	    ZCHECKSUM_FLAG_NOPWRITE, "sm3"},
 };
 
 /*
@@ -217,6 +222,8 @@ zio_checksum_to_feature(enum zio_checksum cksum)
 	case ZIO_CHECKSUM_EDONR:
 		return (SPA_FEATURE_EDONR);
 #endif
+	case ZIO_CHECKSUM_SM3:
+		return (SPA_FEATURE_SM3);
 	default:
 		return (SPA_FEATURE_NONE);
 	}

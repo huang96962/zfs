@@ -29,7 +29,9 @@
  * Copyright (c) 2019, Allan Jude
  * Copyright (c) 2019, Klara Inc.
  * Copyright (c) 2019-2020, Michael Niewöhner
- */
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
+*/
 
 #ifndef _ZIO_H
 #define	_ZIO_H
@@ -91,6 +93,7 @@ enum zio_checksum {
 #if !defined(__FreeBSD__)
 	ZIO_CHECKSUM_EDONR,
 #endif
+	ZIO_CHECKSUM_SM3,
 	ZIO_CHECKSUM_FUNCTIONS
 };
 

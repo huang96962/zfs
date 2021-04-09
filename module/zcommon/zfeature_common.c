@@ -27,6 +27,8 @@
  * Copyright (c) 2017, Intel Corporation.
  * Copyright (c) 2019, Klara Inc.
  * Copyright (c) 2019, Allan Jude
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _KERNEL
@@ -454,6 +456,18 @@ zpool_feature_init(void)
 	    edonr_deps);
 	}
 #endif
+
+	{
+	static const spa_feature_t sm3_deps[] = {
+		SPA_FEATURE_EXTENSIBLE_DATASET,
+		SPA_FEATURE_NONE
+	};
+	zfeature_register(SPA_FEATURE_SM3,
+	    "org.illumos:sm3", "sm3",
+	    "SM3 hash algorithm.",
+	    ZFEATURE_FLAG_PER_DATASET, ZFEATURE_TYPE_BOOLEAN,
+	    sm3_deps);
+	}
 
 	{
 	static const spa_feature_t redact_books_deps[] = {

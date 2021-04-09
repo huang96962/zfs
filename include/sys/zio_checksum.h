@@ -22,6 +22,8 @@
  * Copyright (c) 2005, 2010, Oracle and/or its affiliates. All rights reserved.
  * Copyright (c) 2014, 2016 by Delphix. All rights reserved.
  * Copyright Saso Kiselkov 2013, All rights reserved.
+ * Copyright (c) 2021, Beijing Asia Creation Technology Co.,Ltd
+ * All rights reserved
  */
 
 #ifndef _SYS_ZIO_CHECKSUM_H
@@ -121,6 +123,10 @@ extern zio_checksum_t abd_checksum_edonr_native;
 extern zio_checksum_t abd_checksum_edonr_byteswap;
 extern zio_checksum_tmpl_init_t abd_checksum_edonr_tmpl_init;
 extern zio_checksum_tmpl_free_t abd_checksum_edonr_tmpl_free;
+
+/* sm3 */
+extern zio_checksum_t abd_checksum_sm3_native;
+extern zio_checksum_t abd_checksum_sm3_byteswap;
 
 extern zio_abd_checksum_func_t fletcher_4_abd_ops;
 extern zio_checksum_t abd_fletcher_4_native;
